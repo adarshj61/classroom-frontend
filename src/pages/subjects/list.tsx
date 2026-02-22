@@ -1,9 +1,8 @@
-import React, {useMemo} from 'react';
+import React, {useMemo, useState} from 'react';
 import {ListView} from "@/components/refine-ui/views/list-view.tsx";
 import {Breadcrumb} from "@/components/ui/breadcrumb.tsx";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input.tsx";
-import {useState} from "react";
 import {Select, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select.tsx";
 import {SelectContent} from "@radix-ui/react-select";
 import {DEPARTMENT_OPTIONS} from "@/components";
