@@ -12,7 +12,7 @@ import "./App.css";
 import { Toaster } from "./components/refine-ui/notification/toaster";
 import { useNotificationProvider } from "./components/refine-ui/notification/use-notification-provider";
 import { ThemeProvider } from "./components/refine-ui/theme/theme-provider";
-import { dataProvider } from "./providers/data";
+import { dataProvider } from "./providers/data.ts";
 import Dashboard from "@/pages/Dashboard.tsx";
 import SubjectList from "@/pages/subjects/list.tsx";
 import SubjectsCreate from "@/pages/subjects/create.tsx";
@@ -40,7 +40,7 @@ function App() {
                   },
                   {
                       name: 'subjects',
-                      list: '/subject',
+                      list: '/subjects',
                       create: '/subjects/create',
                       meta: {label: 'Subjects' , icon: <BookOpen />}
 
