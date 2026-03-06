@@ -17,6 +17,7 @@ import Dashboard from "@/pages/Dashboard.tsx";
 import SubjectList from "@/pages/subjects/list.tsx";
 import SubjectsCreate from "@/pages/subjects/create.tsx";
 
+
 function App() {
   return (
     <BrowserRouter>
