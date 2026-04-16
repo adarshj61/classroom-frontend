@@ -7,7 +7,7 @@ export const MOCK_SUBJECTS: Subject[] = [
         name: "Introduction to computer science",
         department: "CS",
         description: "An introductory course covering the fundamntal concepts of computer science and programming",
-        created_at: new Date().toISOString(),
+        createdAt: new Date().toISOString(),
 
     },
     {
@@ -16,7 +16,7 @@ export const MOCK_SUBJECTS: Subject[] = [
         name: "Introduction to computer science",
         department: "CS",
         description: "An introductory course covering the fundamntal concepts of computer science and programming",
-        created_at: new Date().toISOString(),
+        createdAt: new Date().toISOString(),
 
     },
     {
@@ -25,7 +25,7 @@ export const MOCK_SUBJECTS: Subject[] = [
         name: "Introduction to computer science",
         department: "CS",
         description: "An introductory course covering the fundamntal concepts of computer science and programming",
-        created_at: new Date().toISOString(),
+        createdAt: new Date().toISOString(),
 
     },
 
