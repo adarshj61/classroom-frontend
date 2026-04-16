@@ -1,6 +1,6 @@
 import {createDataProvider, CreateDataProviderOptions} from "@refinedev/rest";
 import {BACKEND_BASE_URL} from "@/constants";
-import {ListResponse} from "@/types";
+import {CreateResponse, ListResponse} from "@/types";
 import {HttpError} from "@refinedev/core";
 if (!BACKEND_BASE_URL) {
    throw new Error("BACKEND_BASE_URL is not configured. Set VITE_BACKEND_BASE_URL in your environment.");
@@ -22,6 +22,7 @@ const buildHttpError = async (response: Response): Promise<HttpError> => {
 }
 const options : CreateDataProviderOptions = {
   getList : {
+
     getEndpoint:({ resource }) => resource,
     buildQueryParams: async ({resource, pagination, filters}) => {
       const page = pagination?.currentPage ?? 1;
@@ -48,6 +49,14 @@ const options : CreateDataProviderOptions = {
       return payload.pagination?.total ?? payload.data ?.length ?? 0;
     }
 
+  },
+  create: {
+    getEndpoint: ({ resource }) => resource,
+    buildBodyParams: async ({ variables}) => variables,
+    mapResponse: async (response) => {
+      const json: CreateResponse = await response.json();
+      return json.data ?? [];
+    }
   }
 }
 
