@@ -23,7 +23,7 @@ const buildHttpError = async (response: Response): Promise<HttpError> => {
 const options : CreateDataProviderOptions = {
   getList : {
 
-    getEndpoint:({ resource }) => resource,
+    getEndpoint:({ resource }) => `api/${resource}`,
     buildQueryParams: async ({resource, pagination, filters}) => {
       const page = pagination?.currentPage ?? 1;
       const pageSize = pagination?.pageSize ?? 10;
@@ -51,7 +51,7 @@ const options : CreateDataProviderOptions = {
 
   },
   create: {
-    getEndpoint: ({ resource }) => resource,
+    getEndpoint: ({ resource }) => `api/${resource}`,
     buildBodyParams: async ({ variables}) => variables,
     mapResponse: async (response) => {
       const json: CreateResponse = await response.json();
