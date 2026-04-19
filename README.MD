@@ -43,6 +43,4 @@ To learn more about **Refine**, please check out the [Documentation](https://ref
 - **shadcn/ui** [Docs](https://refine.dev/docs/guides-concepts/general-concepts/#headless-concept)
 - **React Router** [Docs](https://refine.dev/docs/core/providers/router-provider/)
 
-## License
 
-MIT
